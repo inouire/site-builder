@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Site-builder by inanimatt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Site-builder</h1>
+        <p>A simple static site generator in PHP</p>
+        <p class="view"><a href="https://github.com/inanimatt/site-builder">View the Project on GitHub <small>inanimatt/site-builder</small></a></p>
+        <ul>
+          <li><a href="https://github.com/inanimatt/site-builder/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/inanimatt/site-builder/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/inanimatt/site-builder">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Site-builder is a simple example of a static site generator. These are tools that generate websites from one or more content files by wrapping them in one or more templates. Why?</p>
+
+<ul>
+<li><p>By keeping your layout separate from your content, both are easier to maintain and update.</p></li>
+<li><p>Generating static HTML files and then uploading them is much more efficient than loading your content into your template for each visitor to your site. Your web server can typically serve plain HTML well over 100 times faster than it can serve even simple PHP.</p></li>
+<li><p>Static site generators are much more simple and manageable than CMSes, which makes them good projects for beginner programmers to tinker with.</p></li>
+<li><p>Because you can run your generator offline on your home computer, and then upload the published HTML to your website, you automatically have an off-site backup of your content. By using static HTML instead of dynamic PHP, you also reduce the potential attack surface of your website.</p></li>
+</ul><h3>What's good about site-builder</h3>
+
+<p>Site-builder is a very simple generator. In its basic form, you write your page content as simple HTML or PHP files and put them in the <code>content</code> folder, edit the template to look how you want it to, and run <code>php sitebuilder.phar rebuild</code>. It can also use fancy Twig templates and read content written in the compact and elegant Markdown format. </p>
+
+<p>Site-builder is totally free and open-source. Play around with it, extend it, and learn from it.</p>
+
+<h3>What's not so great about site-builder</h3>
+
+<p>Site-builder has a very short feature list. If you want something that dynamically creates your site's navigation, writes multiple entries to one output file (like a blog), creates next/previous links, or anything like that, look at <a href="http://jekyllrb.com/">Jekyll</a> (the Ruby-based SSG used by GitHub's site pages), <a href="http://phrozn.info/">Phrozn</a> (another PHP SSG), or <a href="http://ringce.com/hyde">Hyde</a> (Python, very fancy). </p>
+
+<h3>How to get it</h3>
+
+<h1>Quick Start</h1>
+
+<ol>
+<li>
+<a href="https://github.com/downloads/inanimatt/site-builder/sitebuilder.phar">Download the .phar file</a>. 
+It's the whole app in one file, with everything it needs to run.</li>
+<li>Put sitebuilder.phar in the directory where you want to keep the installation.</li>
+<li>Run <code>php sitebuilder.phar init</code> to create directories, config, and sample files.</li>
+<li>Test your installation with <code>php sitebuilder.phar rebuild</code>. If it works, you 
+should see a generated <code>example.html</code> file in the <code>output</code> directory.</li>
+<li>Replace the default template with your own. Twig is a pretty straightforward 
+templating language; just put {{ content | raw }} where you want your page 
+content to appear. Check out the <code>README.md</code> file for more help and links to the Twig docs.</li>
+<li>Create your content files. You can write plain HTML (and save as <code>.php</code>), or 
+Markdown (and save as <code>.md</code> or <code>.markdown</code>). You can make sub-directories too.<br>
+Check out the <code>README.md</code> file for more info on Markdown, including a link to the documentation.</li>
+<li>Run <code>php sitebuilder.phar rebuild</code> to regenerate your site.</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/inanimatt">inanimatt</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
